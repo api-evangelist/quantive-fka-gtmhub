@@ -1,0 +1,43 @@
+generated: '2026-07-20'
+method: searched
+source: npm registry (@gtmhub/sdk), github.com/Gtmhub (gtmhub-cli), Homebrew tap, Chocolatey
+note: >-
+  Quantive (fka Gtmhub) has been acquired and its brand folded into WorkBoard;
+  the developer portal (developer.quantive.com) is decommissioned. These are the
+  first-party client packages that remain published on public registries.
+packages:
+  - language: javascript
+    registry: npm
+    name: "@gtmhub/sdk"
+    version: 1.0.55
+    url: https://www.npmjs.com/package/@gtmhub/sdk
+    install: npm install @gtmhub/sdk
+    source: https://github.com/gtmhub/extensibility-sdk
+    description: >-
+      Quantive/Gtmhub extensibility SDK for building marketplace plugins and
+      insights that embed in the OKR platform. Available via CommonJS, AMD and
+      ES6 modules.
+    official: true
+  - language: go
+    registry: github-releases
+    name: gtmhub-cli
+    version: 0.1.7
+    url: https://github.com/Gtmhub/gtmhub-cli
+    install: brew tap gtmhub/homebrew-gtmhub && brew install gtmhub-cli
+    description: >-
+      Gtmhub CLI — command-line client for the Gtmhub/Quantive OKR platform
+      (login, status, get/update key results). Command surface catalogued in
+      cli/quantive-fka-gtmhub-cli.yml.
+    official: true
+  - language: go
+    registry: homebrew
+    name: gtmhub-cli
+    url: https://github.com/Gtmhub/homebrew-gtmhub
+    install: brew tap gtmhub/homebrew-gtmhub && brew install gtmhub-cli
+    official: true
+  - language: go
+    registry: chocolatey
+    name: gtmhub-cli
+    url: https://community.chocolatey.org/packages/gtmhub-cli
+    install: choco install gtmhub-cli
+    official: true

@@ -1,0 +1,46 @@
+generated: '2026-07-20'
+method: searched
+source: https://github.com/Gtmhub/gtmhub-cli
+name: gtmhub-cli
+description: >-
+  Gtmhub CLI — command-line client for the Gtmhub/Quantive OKR platform.
+  Authenticates against a Gtmhub data center and lets you view and update
+  key results from the terminal for scripting/automation.
+binary: gtmhub
+usage: gtmhub [command] [subcommand] {parameters}
+install:
+  - method: homebrew
+    command: brew tap gtmhub/homebrew-gtmhub && brew install gtmhub-cli
+  - method: chocolatey
+    command: choco install gtmhub-cli
+  - method: shell
+    command: curl https://raw.githubusercontent.com/gtmhub/gtmhub-cli/master/distribution/linux/install.sh | bash
+    platform: linux
+auth:
+  style: interactive-login
+  command: gtmhub login --dc us
+  data_centers: [eu, us]
+  notes: EU is the default data center; use --dc us for the US data center.
+commands:
+  - name: login
+    summary: Authorizes the tool to access your Gtmhub instance and act on your behalf.
+  - name: logout
+    summary: Removes the integration with your account.
+  - name: status
+    summary: Displays items that need your attention.
+  - name: update
+    summary: Update your key results.
+  - name: get
+    summary: Group of commands to retrieve items from Gtmhub.
+    subcommands:
+      - name: lists
+        summary: Interact with Gtmhub lists.
+      - name: krs
+        summary: Get information about your key results.
+exit_codes:
+  - code: 0
+    meaning: Command ran successfully.
+  - code: 1
+    meaning: Generic error; most likely the Gtmhub server returned an error code (enable debug for detail).
+  - code: 2
+    meaning: Parser error; check input to command line.

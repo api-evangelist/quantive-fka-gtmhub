@@ -1,8 +1,28 @@
 aid: quantive-fka-gtmhub
+accessModel:
+  pricing: unknown
+  onboarding: unknown
+  trial: false
+  try_now: false
+  public: false
+  label: Unknown
+  confidence: low
+  source: []
+  generated: '2026-07-22'
+  method: derived
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/quantive-fka-gtmhub.png
 name: Quantive (fka Gtmhub)
-description: Quantive (fka Gtmhub) is a company surfaced as a portfolio company of insight-partners and
-  added to the API Evangelist network as a stub for enrichment. This profile is a lead awaiting the enrichment
-  pipeline.
+description: >-
+  Quantive (formerly Gtmhub) is a strategy-execution and OKR (Objectives and Key
+  Results) SaaS platform, historically backed by Insight Partners. The company
+  and its "Quantive Results" product have since been acquired and folded into
+  WorkBoard — quantive.com now redirects to workboard.com and the developer
+  portal (developer.quantive.com) has been decommissioned. The public REST API
+  and OpenAPI reference are no longer reachable, but first-party developer
+  tooling remains published on public registries: the @gtmhub/sdk extensibility
+  SDK on npm (for building marketplace plugins and insights) and the gtmhub-cli
+  command-line client (distributed via Homebrew, Chocolatey, and GitHub
+  releases). This profile captures the surviving developer surface.
 url: https://raw.githubusercontent.com/api-evangelist/quantive-fka-gtmhub/refs/heads/main/apis.yml
 x-type: company
 x-source: vc-portfolio
@@ -10,11 +30,20 @@ x-backed-by:
 - insight-partners
 x-tier: stub
 x-tier-reason: portfolio-lead
+x-status: acquired
+x-acquired-by: workboard
 specificationVersion: '0.20'
 created: '2026-07-17'
-modified: '2026-07-17'
+modified: '2026-07-20'
 tags:
 - Company
+- OKR
+- Strategy Execution
+- Goal Management
+- Performance Management
+- SaaS
+- Extensibility SDK
+- CLI
 apis: []
 maintainers:
 - FN: Kin Lane
@@ -24,3 +53,18 @@ maintainers:
 common:
 - type: Website
   url: https://quantive.com/
+- type: GitHubOrganization
+  url: https://github.com/Gtmhub
+- type: Packages
+  url: packages/quantive-fka-gtmhub-packages.yml
+- type: SDKs
+  url: packages/quantive-fka-gtmhub-packages.yml
+- type: CLI
+  url: cli/quantive-fka-gtmhub-cli.yml
+- type: DomainSecurity
+  url: security/quantive-fka-gtmhub-domain-security.yml
+x-enrichment:
+  date: '2026-07-20'
+  status: enriched
+  artifacts_added: 3
+  pass: local-v1
